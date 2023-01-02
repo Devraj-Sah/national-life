@@ -1,0 +1,38 @@
+RewriteEngine On
+# localhost
+	RewriteBase /nepali
+# live
+# RewriteBase /
+
+#Options -Indexes
+
+RewriteRule 404 404.html [L]
+
+RewriteRule ^(admin|fckeditor)($|/) - [L]
+RewriteRule ^(home|index)$ index.php [L]
+
+RewriteRule ^(ckfinder|ckfinder/ckfinder.html)$ 404.html [L]
+
+# for SEARCH
+RewriteRule ^search$ index.php?action=search [L]
+RewriteRule ^search/page/([0-9]+)$ index.php?action=search&page=$1 [L]
+
+# for TESTIMONIALS 
+RewriteRule ^testimonials/([-A-Za-z]+)/([-A-Za-z0-9]+)$ index.php?action=testimonials&$1=$2 [L]
+RewriteRule ^testimonials index.php?action=testimonials [L]
+
+# for FEEDBACK
+RewriteRule ^feedback/([-A-Za-z]+)/([-A-Za-z0-9]+)$ index.php?action=feedback&$1=$2 [L]
+RewriteRule ^feedback$ index.php?action=feedback [L]
+
+# for SiteMap
+RewriteRule ^sitemap$ index.php?action=showsitemap [L]
+
+# for Resume
+RewriteRule ^resume$ index.php?action=resume [L]
+
+# General
+RewriteRule ^([^.]+)/err/([^.]+)$ index.php?query=$1&err=$2 [L]
+RewriteRule ^([^.]+)/msg/([^.]+)$ index.php?query=$1&msg=$2 [L]
+RewriteRule ^([^.]+)/page/([0-9]+)$ index.php?query=$1&page=$2 [QSA]
+RewriteRule ^([^.]+)$ index.php?query=$1 [L]

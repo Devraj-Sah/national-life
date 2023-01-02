@@ -1,0 +1,40 @@
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Warning:  include(clientobjects.php): failed to open stream: No such file or directory in /var/www/clients/client100/web274/web/web/index.php on line 2
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Warning:  include(): Failed opening 'clientobjects.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/clients/client100/web274/web/web/index.php on line 2
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageTitle in /var/www/clients/client100/web274/web/web/index.php on line 12
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageDescription in /var/www/clients/client100/web274/web/web/index.php on line 13
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Notice:  Undefined variable: pageKeyword in /var/www/clients/client100/web274/web/web/index.php on line 14
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Notice:  Use of undefined constant BASELOCATION - assumed 'BASELOCATION' in /var/www/clients/client100/web274/web/web/index.php on line 16
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Notice:  Use of undefined constant SITE_ADDRESS - assumed 'SITE_ADDRESS' in /var/www/clients/client100/web274/web/web/index.php on line 20
+[21-Feb-2017 11:51:43 Asia/Katmandu] PHP Fatal error:  Call to undefined function ishome() in /var/www/clients/client100/web274/web/web/index.php on line 65
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Warning:  include(clientobjects.php): failed to open stream: No such file or directory in /var/www/clients/client100/web274/web/web/index.php on line 2
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Warning:  include(): Failed opening 'clientobjects.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/clients/client100/web274/web/web/index.php on line 2
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageTitle in /var/www/clients/client100/web274/web/web/index.php on line 12
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageDescription in /var/www/clients/client100/web274/web/web/index.php on line 13
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Notice:  Undefined variable: pageKeyword in /var/www/clients/client100/web274/web/web/index.php on line 14
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Notice:  Use of undefined constant BASELOCATION - assumed 'BASELOCATION' in /var/www/clients/client100/web274/web/web/index.php on line 16
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Notice:  Use of undefined constant SITE_ADDRESS - assumed 'SITE_ADDRESS' in /var/www/clients/client100/web274/web/web/index.php on line 20
+[20-Mar-2017 22:27:35 Asia/Katmandu] PHP Fatal error:  Call to undefined function ishome() in /var/www/clients/client100/web274/web/web/index.php on line 65
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Warning:  include(clientobjects.php): failed to open stream: No such file or directory in /var/www/clients/client100/web274/web/web/index.php on line 2
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Warning:  include(): Failed opening 'clientobjects.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/clients/client100/web274/web/web/index.php on line 2
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageTitle in /var/www/clients/client100/web274/web/web/index.php on line 12
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageDescription in /var/www/clients/client100/web274/web/web/index.php on line 13
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Notice:  Undefined variable: pageKeyword in /var/www/clients/client100/web274/web/web/index.php on line 14
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Notice:  Use of undefined constant BASELOCATION - assumed 'BASELOCATION' in /var/www/clients/client100/web274/web/web/index.php on line 16
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Notice:  Use of undefined constant SITE_ADDRESS - assumed 'SITE_ADDRESS' in /var/www/clients/client100/web274/web/web/index.php on line 20
+[03-May-2017 08:11:34 Asia/Katmandu] PHP Fatal error:  Call to undefined function ishome() in /var/www/clients/client100/web274/web/web/index.php on line 65
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Warning:  include(clientobjects.php): failed to open stream: No such file or directory in /var/www/clients/client100/web274/web/web/index.php on line 2
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Warning:  include(): Failed opening 'clientobjects.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/clients/client100/web274/web/web/index.php on line 2
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageTitle in /var/www/clients/client100/web274/web/web/index.php on line 12
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageDescription in /var/www/clients/client100/web274/web/web/index.php on line 13
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Notice:  Undefined variable: pageKeyword in /var/www/clients/client100/web274/web/web/index.php on line 14
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Notice:  Use of undefined constant BASELOCATION - assumed 'BASELOCATION' in /var/www/clients/client100/web274/web/web/index.php on line 16
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Notice:  Use of undefined constant SITE_ADDRESS - assumed 'SITE_ADDRESS' in /var/www/clients/client100/web274/web/web/index.php on line 20
+[22-May-2017 06:01:12 Asia/Katmandu] PHP Fatal error:  Call to undefined function ishome() in /var/www/clients/client100/web274/web/web/index.php on line 65
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Warning:  include(clientobjects.php): failed to open stream: No such file or directory in /var/www/clients/client100/web274/web/web/index.php on line 2
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Warning:  include(): Failed opening 'clientobjects.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/clients/client100/web274/web/web/index.php on line 2
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageTitle in /var/www/clients/client100/web274/web/web/index.php on line 12
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Notice:  Undefined variable: pagePageDescription in /var/www/clients/client100/web274/web/web/index.php on line 13
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Notice:  Undefined variable: pageKeyword in /var/www/clients/client100/web274/web/web/index.php on line 14
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Notice:  Use of undefined constant BASELOCATION - assumed 'BASELOCATION' in /var/www/clients/client100/web274/web/web/index.php on line 16
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Notice:  Use of undefined constant SITE_ADDRESS - assumed 'SITE_ADDRESS' in /var/www/clients/client100/web274/web/web/index.php on line 20
+[29-May-2017 17:53:21 Asia/Katmandu] PHP Fatal error:  Call to undefined function ishome() in /var/www/clients/client100/web274/web/web/index.php on line 65

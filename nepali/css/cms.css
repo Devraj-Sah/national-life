@@ -1,0 +1,297 @@
+.cms-content{
+    /*margin-bottom: 20px;*/
+    /*font-family: 'RalewayRegular' !important;*/
+    line-height: 1.7;
+    padding:15px;
+    /*min-height:200px;*/
+}
+/*.cms-content:after, .cms-content:before{
+    display: table;
+    content: " ";
+}
+
+.cms-content:after{
+    clear:both;
+}*/
+
+.inner-content-wrapper{
+    padding: 20px 0px;
+}
+.inner-content-title{
+    font-size: 45px;
+    line-height: 48px;
+    margin-bottom: 41px;  
+    color: #8e8e8e;
+    text-transform: capitalize;
+}
+.inner-content{
+    font-size: 17px;
+    line-height: 28px;
+}
+.breadcrumb{
+    background-color:transparent;
+    padding: 0px;
+    border-bottom: 1px solid rgba(203, 191, 9, 0.22);
+    /*    padding: 10px 20px;
+        margin-left: -24px;
+        margin-top: -15px;
+        margin-right: -15px;
+        margin-bottom: 15px;*/
+}
+
+.breadcrumb>.active ,.breadcrumb>li>a{
+    color: #9A9693;
+    font-size: 13px;
+    font-weight: 600;
+}
+.breadcrumb > .active{
+    color: rgb(215, 204, 15);
+}
+.breadcrumb>li+li:before {
+    /*color: #FFF;*/
+}
+.breadcrumb > li>a:hover{
+    color: rgb(215, 204, 15);
+}
+ol.breadcrumb:before {
+    /*    content: ' ';
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 9px solid rgb(0, 19, 95);
+        border-right: 10px solid transparent;
+        position: absolute;
+        top: 19px;
+        left: -9px;*/
+}
+.page-image{
+    max-width: 310px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 7px;
+    margin-top: 6px;
+    display:inline-block;
+}
+.margin-top-10px{
+    margin-top: 10px;
+    /*border-top: 1px solid #CBBF09;*/
+    padding-top: 10px;
+}
+.inner-link-title{
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: .001em;
+    line-height: 16px;
+    padding: 0;
+    margin: 6px 0;
+    color: rgba(20, 23, 124, 0.66);
+    position: relative;
+    font-family: RalewayRegular;
+    letter-spacing: 1.1px;
+}
+.sublinks-wrapper{
+    background: #e6e6e6;
+    padding: 50px 0px;
+    margin-bottom: 20px;
+}
+.sublinks{
+    padding: 10px;
+    min-height: 50px;
+    overflow: hidden;
+    color: #3e3e3e !important;
+    margin-bottom: 15px;
+}
+.sublinks:hover{
+    border:1px solid rgba(200, 190, 11, 0.28);
+    background: #fff;
+}
+.sublinks:hover .inner-link-title{
+    color: rgb(187, 178, 16);
+}
+.sublinks-image{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+.sublinks-content{
+    max-height: 60px;
+    overflow: hidden;
+    font-size: 13px;
+}
+.sublinks-file{
+    margin-bottom: 35px;
+}
+.download-link{
+    display: block;
+    font-size: 14px;
+    text-transform: lowercase;
+    color: #4066b2;
+    font-weight: 600;
+    position: relative;
+    padding-left: 40px;
+    top: 6px;
+}
+.download-link::before{
+    content: url(../img/download.png);
+    width: 10px;
+    height: 11px;
+    position: absolute;
+    left: 0px;
+}
+.download-link:hover::before{
+    content: url(../img/download2.png);
+    width: 10px;
+    height: 11px;
+    position: absolute;
+    left: 0px;
+}
+
+.more-links ul{
+
+}
+.more-links ul li{
+    list-style: square;
+    list-style-position: inside;
+    margin-top: 5px;
+
+}
+
+#pAging {
+    color: #000;
+    font-size: 13px;
+    line-height: 2;
+    margin-top:15px;
+    float: right;
+}
+
+#pAging > div{
+    display:none;
+}
+.pAging, .selected{
+    display: inline-block;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    background: #837D7D;
+    color: #fff;
+    margin-top: 5px;
+    border-radius: 2px;
+    border: 1px solid #FFEDED;
+    text-decoration: none;
+}
+
+.pAging:hover, .selected:hover{
+    background:#D7CC0F;
+    text-decoration: none;
+    color:#fff !important;
+}
+.selected{
+    background: #D7CC0F;
+}
+.inner-banner-img img{
+    width: 100%;
+    max-height: 466px;
+}
+/*for the inner page slider*/
+
+/*
+.sgprev , .sgnext {
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    height: 45px;
+    top: 40%;
+    z-index: 9;
+}
+.sgprev{
+    background: url(../img/prev.png) no-repeat center center;
+    left: -24px;
+}
+
+.sgnext{
+    background: url(../img/next.png) no-repeat center center;
+    right: -22px;
+}
+.sgnext:hover,.sgprev:hover{
+    border-radius: 25px;
+    height: 45px;
+} 
+.sgprev:hover {
+    background: url(../img/prev-hov.png) no-repeat center center;
+}
+.sgnext:hover{
+    background: url(../img/next-hov.png) no-repeat center center;
+}
+.sg-slider{
+    max-height: 500px;
+    overflow: hidden;
+}
+.sgcontrols{
+    margin-top: -255px;
+}
+.sgpager-wrapper{
+    margin: 17px 0px 20px;
+    position: relative;
+    top: -23px;
+}
+#sgpager{
+    float: left;
+    margin:0px;
+}
+#sgpager > a >span{
+    display: none;
+}
+#sgpager > a{
+    height: 5px;
+    width: 20px;
+    background: url(../img/unselected.png) repeat;
+    display: inline-block;
+    padding: 1px 6px;
+    border-left: 1px solid #CCC;
+    color: #000;
+    text-transform: capitalize;
+    margin-right: 3px;
+}
+#sgpager > a:last-child{
+    border-right: 1px solid #ccc;
+}
+#sgpager >a.selected{
+    background: url(../img/selected.png) repeat;
+    margin-bottom: 0px;
+}
+.sg-slider-a{
+    float: left;
+}*/
+.hr{
+    border-top:1px solid rgb(243, 240, 200);
+}
+
+/////FINANCIAL CSS/////
+ul.financial {
+  margin: 0;
+  padding: 0;
+}
+.financial li{
+  list-style-position: inside;
+  color: #CC3333;
+  font-weight: bold;
+  line-height: 1.5em;
+  list-style-type: disc;
+  margin-bottom: 5px;
+}
+.financial > li{
+  font-size: 16px;
+}
+.financial li a{
+  font-size: 14px;
+}
+.financial li.sub{
+  list-style: none;
+}
+.financial li.sub ul{
+  padding: 10px 0 5px;
+}
+.financial li.sub li {
+  color: #CC8033;
+}

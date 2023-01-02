@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>National Life - Premium Calculator</title>
+
+
+<link rel="stylesheet" type="text/css" href="res/bootstrap.min.css">
+
+    <style type="text/css">
+
+
+
+        input[type=checkbox].css-checkbox {
+            position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+        }
+
+        input[type=checkbox].css-checkbox + label.css-label {
+            padding-left:29px;
+            height:24px;
+            display:inline-block;
+            line-height:24px;
+            background-repeat:no-repeat;
+            background-position: 0 0;
+            font-size:13px;
+            vertical-align:middle;
+            cursor:pointer;
+
+        }
+
+        input[type=checkbox].css-checkbox:checked + label.css-label {
+            background-position: 0 -24px;
+        }
+        label.css-label {
+            background-image:url(res/chkbx.png);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+
+
+
+
+        /* --------------------------------------------------- */
+
+
+
+        body {
+            background: #232175;
+            font-family: 'Roboto', sans-serif;
+            font-size: small;
+            background-image: url("res/bg.jpg");
+        }
+        .form-control {
+            min-height: 5px;
+            box-shadow: none;
+            border-color: #d7df10;
+
+        }
+
+        .form-control:focus {
+            border-color: #d7df10;
+        }
+        .form-control, .btn {
+            border-radius: 3px;
+        }
+
+
+        .signup-form {
+            width: 400px;
+            margin: 0 auto;
+            padding: 2px 0;
+        }
+        .signup-form form {
+            color: #232175;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            background: #e8e5e5;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+        .signup-form h2 {
+            color: #333;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        .signup-form hr {
+            margin: 0 -10px 10px;
+        }
+        .signup-form .form-group {
+            margin-bottom: 20px;
+        }
+        .signup-form label {
+            font-weight: normal;
+            font-size: 12px;
+        }
+        .signup-form .btn {
+            font-size: 13px;
+            font-weight: bold;
+            background: #232175;
+            border: none;
+            min-width: 140px;
+        }
+        .signup-form .btn:hover, .signup-form .btn:focus {
+            background:  #d7df10;
+            outline: none !important;
+        }
+        .signup-form a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .signup-form a:hover {
+            text-decoration: none;
+        }
+        .signup-form form a {
+            color: #232175;
+            text-decoration: none;
+        }
+        .signup-form form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+<div id="loading">
+  <img id="loading-image" src="res/loading.img" alt="Loading..." />
+</div> -->
+
+
+<div class="signup-form" >
+
+<form id="myform">
+    <strong class="text-center">National Life Premium Calculator</strong>
+
+    <hr>
+    <!--<legend> <img src="res/logo.jpg" width="150" height="75"/> National Life Insurance </legend>-->
+
+    <div class="form-group">
+        <label>Plan</label>
+      <select id="plan" name="plan" class="form-control">
+										<option value="" selected disabled>Select</option>
+										<option value="AB">Amrit Barsaha-1 (Money Back)</option>
+										<option value="ASA">Amrit Shree (Money Back)</option>
+										<option value="ASAW">Amrit Shree (Money Back & Whole Life)</option>
+                                        <option value="A">Anticipated Endowment (Money Back)</option>
+										<option value="BA">Bachat Amrit (Endowment)</option>
+										<option value="Y">Bal Amrit (Child Endowment)</option>
+										<option value="Y1">Bal Amrit-1 (Child Endowment)</option>
+										<option value="F">Bal Bhagyodaya (Money Back)</option>
+										<option value="BB">Bhabishya Britti (Pension Plan)</option>
+									<!--	<option value="C">Child's Education and Marriage (Endowment)</option> -->
+										<option value="DA">Dampati Amrit Sawadhik(Husband & Wife Endowment)</option>
+										<option value="E">Endowment Plan</option>
+										<option value="J">Jeevan Amrit(Whole Life) </option>
+									<!--	<option value="KA">Kamal Amrit Plan (Term Life)</option> -->
+										<option value="MA">Myadi Amrit (Term Life)</option>
+										<option value="SSA">Sanjeevani Sawadhik Amrit (Endowment)</option>
+										<option value="S">Saral Amrit (Term Life)</option>
+										<option value="YBA">Yakal Bal Amrit Sawadhik(Single Child Endowment) </option>
+										<option value="YSA">Yakal Sawadhik (Single Endowment) </option>
+										<option value="YAB">Yakal Amrit Barsha (Single Endowment)</option>
+										<option value="YSSA">Yakal Sanjeevani Sawadhik Amrit (Single Endowment)</option>
+      </select>
+     
+      </div>
+      <div class="form-group">
+      <label for="sumAssured">Sum Assured</label>
+		<input id="sumAssured" name="sumAssured" type="number" class="form-control"/>
+        </div>
+        
+        
+         <div class="form-group">
+         <label for="term">Term (In Years)</label>
+      <input id="term" name="term" type="number" class="form-control"/>
+      
+    </div>
+   
+    <div class="form-group">
+    <label for="dobType">B.S / A.D</label>
+        <select id="dobType" class="form-control">
+        <option value="bs" selected>BS</option>
+        <option value="ad">AD</option>
+        </select>
+        </div>
+        
+         <div class="form-group">
+        
+       <label for="dob">Assured DOB</label>
+        <input id="dob" name="dob" type="text" data-inputmask="'alias': 'date'" class="form-control"/> 
+        
+        </div>
+	  
+		<span id="dobProposerSpan" style="display:none">
+         <div class="form-group">
+         <label for="dobProposer" >Proposer DOB</label>
+	  <input id="dobProposer" name="dobProposer" type="text" data-inputmask="'alias': 'date'" class="form-control"/>
+      
+      </div>
+		</span>
+	  
+		<span id="dadob" style="display:none" >
+        <div class="form-group">
+        <label for="dob2">Husband or Wife's DOB</label> 
+	  <input id="dob2" name="dob2" type="text" data-inputmask="'alias': 'date'" class="form-control"/>
+      
+      </div>
+		</span>
+
+		<span id="intervalArea">
+         <div class="form-group">
+          <label>Payment Interval</label>
+      <select id="interval" name="interval" class="form-control">
+	  <option value="" selected disabled>Select</option>
+	  <option value="YRLY">Yearly</option>
+	  <option value="HFLY">Half Yearly </option>
+	  <option value="QTLY">Quarterly </option>
+	  <option value="MTLY">Monthly</option>
+	  </select>
+     
+        </div>
+	  </span>
+      
+      
+	 <span id="rider">
+        <div class="form-group">
+
+	 <input type="checkbox" name="adb" id="adb" value="yes" class="css-checkbox">
+             <label for="adb" class="css-label">Accidental Death Benefit</label>
+        </div>
+      
+      <div class="form-group">
+
+	  <input type="checkbox" name="wop" id="wop" value="yes" class="css-checkbox">
+	 <label for="wop" class="css-label">Waiver Of Premium</label>
+      </div>
+      
+      
+       <div class="form-group">
+
+	  <input type="checkbox" name="total_perm_disable" id="total_perm_disable" value="yes" style="display:none" class="total_perm_disable css-checkbox">
+	  <label for="total_perm_disable" class="total_perm_disable css-label" style="display:none">Total Permanent Disablement Benefit</label>
+      
+      </div>
+
+         <div class="form-group">
+
+
+	        <input type="checkbox" name="term_life_add_benefit" id="term_life_add_benefit" value="yes" class="term_life_add_benefit css-checkbox" style="display:none" >
+	  <label for="term_life_add_benefit" class="term_life_add_benefit css-label" style="display:none">Additional Term Life Benefit</label>
+      
+      </div>
+
+       <div class="form-group">
+
+
+           <input type="checkbox" name="ci" value="yes" class="ci css-checkbox" id="ci" style="display:none">
+            <label for="ci" class="ci css-label" style="display:none">Critical Illness</label>
+
+       </div>
+
+
+
+
+
+	  </span>
+      <button class="btn btn-primary btn-block btn-lg" id="calcPrm">Calculate</button>
+
+
+
+
+
+    <center><strong id="loading2">Loading . . . Please wait </strong></center>
+    <center><img src="res/ripple.gif" id="loading3"/></center>
+</form>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+
+ <script src="res/jquery-1.10.2.js"></script>
+ <script src="res/bootstrap.min.js"></script>
+<script src="res/bootbox.min.js"></script>
+ <script src="res/alasql.min.js"></script>
+ <script src="res/inputmaskbundle.js"></script>
+ <!--<script defer src="res/data.js"></script>-->
+ <script src="res/dateconverter.js"></script>
+ <script src="res/agecalc.js"></script>
+ <script src="res/accounting.js"></script>
+
+ <script src="res/calc.js"></script>
+
+
+ <script>
+
+
+     $("#dob").inputmask();
+  $("#dob2").inputmask();
+  $("#dobProposer").inputmask();
+  $(window).load(function() {
+     $('#loading2').hide();
+     $('#loading3').hide();
+  });	
+  $(".input").focus(function() {
+	 		$(this).parent().addClass("focus");
+	 	})
+ </script>
+

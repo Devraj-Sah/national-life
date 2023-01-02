@@ -1,0 +1,491 @@
+<?php
+include("init.php");
+if(!isset($_SESSION['sessUserId']))//User authentication
+{
+	header("Location: login.php");
+	exit();
+}
+function saveImages($xid, $files, $captionList)
+{
+	global $groups;
+
+	for ($i=0; $i<count($files['galimage']['name']); $i++)
+	{
+		if(isset($files['galimage']['tmp_name'][$i]) && $files['galimage']['size'][$i] <= (1024*1024) && !empty($files['galimage']['name'][$i]))
+		{
+			$ft = $files['galimage']['type'][$i];
+			if($ft == "image/jpeg" || $ft == "image/jpg" || $ft == "image/pjpeg")
+			{
+				$ext = "jpg";
+			}
+			else if ($ft == "image/gif")
+				$ext = "gif";
+			else if ($ft == "image/png" || $ft == "image/x-png")
+				$ext = "png";
+
+			if ($ext == "jpg" || $ext == "gif" || $ext == "png")
+			{
+				$photoId = $groups->saveGallerySub("", $xid, $captionList[$i]);
+				$groups -> updateUrlName($photoId);
+				$groups -> updateImage($photoId, $photoId . "." . $ext);
+
+				copy($files['galimage']['tmp_name'][$i], "../" . CMS_GROUPS_DIR . $photoId . "." . $ext);
+			}
+		}
+	}
+}
+
+function saveListingImage($photoId)
+{
+	global $_FILES;
+	
+	if (isset($_FILES['listImage']['name']))
+	{
+		if($_FILES['listImage']['size'] <= (1024*1024))
+		{
+			$ft = $_FILES['listImage']['type'];
+			if($ft == "image/jpeg" || $ft == "image/jpg" || $ft == "image/pjpeg")
+			{
+				$ext = "jpg";
+			}
+			else if ($ft == "image/gif")
+				$ext = "gif";
+			else if ($ft == "image/png" || $ft == "image/x-png")
+				$ext = "png";
+
+			if ($ext == "jpg" || $ext == "gif" || $ext == "png")
+			{	  
+				copy($_FILES['listImage']['tmp_name'], "../" . CMS_GROUPS_DIR. $photoId . "." . $ext);
+				return $ext;
+			}
+		}
+	}
+	return "";
+}
+
+function saveListFiles($listingId, $files, $captionList)
+{
+	global $listingFiles;
+	global $allowedTypes;
+
+	for ($i=0; $i<count($files['listFile']['name']); $i++)
+	{
+		if ($files['listFile']['size'][$i] > 0 && in_array($files['listFile']['type'], $allowedTypes))
+		{
+			$listingFiles->save($listingId, $captionList[$i], $files['listFile']['name'][$i]);
+			copy($files['listFile']['tmp_name'][$i], "../" . CMS_LISTING_FILES_DIR . $files['listFile']['name'][$i]);
+		}
+	}
+}
+
+function saveGroupImage($groupId)
+{
+	global $_FILES; 
+	
+	if (isset($_FILES['groupImage']['name']))
+	{
+		if($_FILES['groupImage']['size'] <= (1024*1024))
+		{
+			$ft = $_FILES['groupImage']['type'];
+			if($ft == "image/jpeg" || $ft == "image/jpg" || $ft == "image/pjpeg")
+			{
+				$ext = "jpg";
+			}
+			else if ($ft == "image/gif")
+				$ext = "gif";
+			else if ($ft == "image/png" || $ft == "image/x-png")
+				$ext = "png";
+
+			if ($ext == "jpg" || $ext == "gif" || $ext == "png")
+			{	  
+				copy($_FILES['groupImage']['tmp_name'], "../" . CMS_GROUPS_DIR. $groupId . "." . $ext);
+				return $ext;
+			}
+		}
+	}
+	return "";
+}
+
+if(isset($_POST['del_selected_btn']))
+	{	$flag=0;
+		for($i=0; $i<count($_POST['delgalid']); $i++)
+		{
+			$groups -> delete($_POST['delgalid'][$i]);
+
+			$flag++;
+		}
+		if($flag > 0)
+			header ("Location: cms.php?id=".$_POST['id']."&parentId=".$_POST['parentId']."&level=".$_GET['level']."&groupType=Other Links&msg=Successfully Deleted!");
+		else
+			header ("Location: cms.php?id=".$_POST['id']."&parentId=".$_POST['parentId']."&level=".$_GET['level']."&groupType=Other Links&msg=No Image Selected!");
+	}
+	if (isset($_POST['save']))
+	{
+
+		$contents = "";
+		$shortcontents = "";
+
+		if ($_POST['linkType'] == "Link")
+			$contents = $_POST['directLink'];
+		else if ($_POST['linkType'] == "File")
+		{
+			$contents = $_FILES['uploadFile']['name'];
+			$shortcontents = $_POST['shortcontents'];
+		}
+		if ($_POST['linkType'] == "Contents Page")
+		{
+			$shortcontents = $_POST['shortcontents'];
+			$contents = $_POST['contents'];
+		}
+		if ($_POST['linkType'] == "Normal Group")
+		{
+			$shortcontents = $_POST['shortcontents'];
+			$contents = $_POST['contents'];
+			$display = $_POST['display'];
+		}
+
+		if (isset($_POST['id']))
+		{
+  //edit contents
+
+			if ($_POST['linkType'] == "File")
+			{
+				if (isset($_FILES['uploadFile']['name']))
+				{ 
+					$groupResult = $groups->getById($_POST['id']);
+					$groupRow = $conn->fetchArray($groupResult);
+					$oldFilename = $groupRow['contents'];
+
+					if(!empty($_FILES['uploadFile']['name']) && in_array($_FILES['uploadFile']['type'], $allowedTypes))
+					{				
+						if (file_exists("../" . CMS_FILES_DIR . $oldFilename))
+							unlink("../" . CMS_FILES_DIR . $oldFilename);
+
+						copy($_FILES['uploadFile']['tmp_name'], "../" . CMS_FILES_DIR . $_FILES['uploadFile']['name']);
+					}
+					else
+					{
+						$contents = $oldFilename;
+					}
+				}
+			}
+			else if ($_POST['linkType'] == "Gallery")
+			{
+				saveImages($_POST['id'], $_FILES, $_POST['imageCaption']);
+
+				for ($i=0; $i < count($_POST['oldCaptionIds']); $i++)
+				{
+					$groups->saveGallerySub($_POST['oldCaptionIds'][$i], "", $_POST['oldCaptions'][$i]);
+				}
+			}
+			else if ($_POST['linkType'] == "List")
+			{
+				if($groups -> isUnique($_POST['listId'], $_POST['listUrlTitle']) && !empty($_POST['listUrlTitle']))
+				{ 
+					if (isset($_POST['listId']))
+					{
+						$groups->saveListSub($_POST['listId'], $_POST['listTitle'], $_POST['listUrlTitle'], $_POST['id'], $_POST['listShortDescription'], $_POST['listDescription'], $_POST['listMain'], $_POST['listWeight'], $_POST['listPageTitle'], $_POST['listPageKeyword'], $_POST['listPageDescription'], $_POST['onDate']);
+
+						$ext = saveListingImage($_POST['listId']);
+						if (!empty($ext))
+							$groups->updateImage($_POST['listId'], $_POST['listId'] . "." . $ext);
+
+						saveListFiles($_POST['listId'], $_FILES, $_POST['listCaption']);
+					}
+					else
+					{
+						if (!empty($_POST['listTitle']))
+						{
+							$newListId = $groups->saveListSub("", $_POST['listTitle'], $_POST['listUrlTitle'], $_POST['id'], $_POST['listShortDescription'], $_POST['listDescription'], $_POST['listMain'], $_POST['listWeight'], $_POST['listPageTitle'], $_POST['listPageKeyword'], $_POST['listPageDescription'], $_POST['onDate']);
+							$ext = saveListingImage($newListId);
+							if (!empty($ext))
+								$groups->updateImage($newListId, $newListId . "." . $ext);
+
+							saveListFiles($newListId, $_FILES, $_POST['listCaption']);
+						}
+					}
+				}
+				else
+				{
+					$err = "Alias Title already exists. Please provide unique Alias Title";
+				}
+			}
+			else if ($_POST['linkType'] == "Video Gallery")
+			{
+				for ($i=0; $i<count($_POST['videoUrl']); $i++)
+				{
+					if(!empty($_POST['videoUrl'][$i]))
+					{
+						$vid = $groups -> saveVideoSub("", $_POST['id'], $_POST['videoUrl'][$i]);
+						$groups -> updateUrlName($vid);
+					}
+				}
+
+				for ($i=0; $i < count($_POST['oldVideoIds']); $i++)
+				{
+					if(!empty($_POST['oldUrls'][$i]))
+						$groups -> saveVideoSub($_POST['oldVideoIds'][$i], "", $_POST['oldUrls'][$i]);
+				}
+			}	
+
+			if($groups -> isUnique($_POST['id'], $_POST['urlname']) && !empty($_POST['urlname']))
+			{
+
+				$groups->save($_POST['id'], $_POST['name'], $_POST['urlname'], "",  $_POST['parentId'], "", $shortcontents, $contents, $_POST['weight'], $_POST['hide'], $_POST['pageTitle'], $_POST['pageKeyword'], $_POST['pageDescription'], $_POST['featured'], $_POST['display']);
+
+				$groups -> saveImage($_POST['id']);
+
+				$showId = false;
+
+				if($_POST['linkType'] == "List" || $_POST['linkType'] == "Gallery" || $_POST['linkType'] == "Video Gallery")
+					$showId = true;
+
+				$url = 	"cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId']."&level=".$_GET['level'];
+				if($showId)
+					$url .= "&id=". $_POST['id'];
+				if(isset($_GET['page']))
+					$url .= "&page=".$_GET['page'];
+
+				header ("Location: " . $url ."&msg=Successfully updated!");
+				exit();
+			}
+			else
+				$msg = "Alias Name already exists.";
+		}
+////// ADD NEW //// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		else 
+		{
+	//add new code goes here...
+			if($_SESSION['sessUserGroupId']!=1){
+				include('manage_cms_by_subuser.php');
+			}
+
+			if(empty($_POST['name']))
+				$msg = "Please enter Name";
+			elseif(empty($_POST['urlname']))
+				$msg = "Please enter Alias Name";
+			elseif(!$groups -> isUnique(0, $_POST['urlname']))
+				$msg = "Alias Name already exists";
+			elseif($_POST['linkType'] == "select")
+				$msg = "Please selet Type";
+
+			if(empty($msg))
+			{
+				$newId = $groups->save("", $_POST['name'], $_POST['urlname'], $_GET['groupType'], $_POST['parentId'], $_POST['linkType'], $shortcontents, $contents, $_POST['weight'], $_POST['hide'], $_POST['pageTitle'], $_POST['pageKeyword'], $_POST['pageDescription'], $_POST['featured'], $_POST['display']);
+
+				$groups->saveImage($newId);
+
+				/*email notification after post by sub users.*/
+				$current_url = 'http://nationallife.com.np/admin/cms.php?'. $_SERVER['QUERY_STRING'];
+				if($newId && $_SESSION['sessUserGroupId'] != 1){			
+					$to      = 'it.nationallife@gmail.com';
+					$subject = 'Update Notification';
+			// message
+					$message = '
+					<html>
+					<head>
+					<title>Update Notification</title>
+					</head>
+					<body>
+					<p>Dear Sir,</p>
+					<p>Please kindly approve new post of the following link : </p>
+					<p><a href="'. $current_url .'"> '. $_POST['name'] .' </a></p>
+					<br />
+					<p>Thank you<br /> ' . $_SESSION['sessFullname'] . ' </p>
+					</body>
+					</html>
+					';
+					// To send HTML mail, the Content-type header must be set
+					$headers = 'From: Admin <it.nationallife@gmail.com>' . "\r\n" ;
+					$headers .='Reply-To: nlgilife@mail.com.np' . "\r\n" ;
+					$headers .='X-Mailer: PHP/' . phpversion();
+					$headers .= "MIME-Version: 1.0\r\n";
+					$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";   
+					mail($to, $subject, $message, $headers);
+				}
+
+				if ($_POST['linkType'] == "File")
+				{
+
+					if (isset($_FILES['uploadFile']['name']) && in_array($_FILES['uploadFile']['type'], $allowedTypes))
+					{
+						copy($_FILES['uploadFile']['tmp_name'], "../" . CMS_FILES_DIR . $_FILES['uploadFile']['name']);
+					}
+				}		
+				else if ($_POST['linkType'] == "List")
+				{
+					$msg = "";
+					if(empty($_POST['listTitle']))
+						$msg = "Please enter Title";
+					elseif(empty($_POST['listUrlTitle']))
+						$msg = "Please enter Alias Title";
+					elseif(!$groups -> isUnique(0, $_POST['listUrlTitle']))
+						$msg = "Alias Title already exists";
+
+					if (empty($msg))
+					{
+						$newListId = $groups->saveListSub("", $_POST['listTitle'], $_POST['listUrlTitle'], $newId, $_POST['listShortDescription'], $_POST['listDescription'], $_POST['listMain'], $_POST['listWeight'], $_POST['listPageTitle'], $_POST['listPageKeyword'], $_POST['listPageDescription'], $_POST['onDate']);
+						$ext = saveListingImage($newListId);
+						if (!empty($ext))
+							$groups->updateImage($newListId, $newListId ."." .$ext);
+
+						saveListFiles($newListId, $_FILES, $_POST['listCaption']);
+					}
+				}
+				else if ($_POST['linkType'] == "Gallery")
+				{
+					saveImages($newId, $_FILES, $_POST['imageCaption']);
+
+					for ($i=0; $i < count($_POST['oldCaptionIds']); $i++)
+					{
+						$groups->saveGallerySub($_POST['oldCaptionIds'][$i], "", $_POST['oldCaptions'][$i]);
+					}
+				}
+				else if ($_POST['linkType'] == "Video Gallery")
+				{
+					for ($i=0; $i<count($_POST['videoUrl']); $i++)
+					{
+						if(!empty($_POST['videoUrl'][$i]))
+						{
+							$vid = $groups -> saveVideoSub("", $newId, $_POST['videoUrl'][$i]);
+							$groups -> updateUrlName($vid);
+						}
+					}			
+				}
+
+				if(empty($msg))
+				{
+					$url = 	"cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId']."&level=".$_GET['level'];
+					if($showId)
+						$url .= "&id=". $_POST['id'];
+					if(isset($_GET['page']))
+						$url .= "&page=".$_GET['page'];
+
+					header ("Location: " . $url ."&msg=Successfully saved!");
+					exit();
+				}
+			}
+		}
+
+
+		if ($_POST['linkType'] == "List")
+		{
+			if (isset($_POST['id']))
+				$id = $_POST['id'];
+			else
+				$id = $newId;
+
+			$url = "cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId']."&level=".$_GET['level'];
+			if($id > 0)
+				$url .= "&id=$id";
+
+			header ("Location: ". $url ."&msg=" . $msg);
+			exit();
+		}
+		else if ($_POST['linkType'] == "Gallery")
+		{
+			if (isset($_POST['id']))
+				$id = $_POST['id'];
+			else
+				$id = $newId;
+
+			if($id > 0)
+				header ("Location: cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&id=$id&msg=" . $msg."&level=".$_GET['level']);
+			else
+				header ("Location: cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&msg=" . $msg."&level=".$_GET['level']);
+		}
+		elseif($_POST['linkType'] == "Vidoe Gallery")
+		{
+			if (isset($_POST['id']))
+				$id = $_POST['id'];
+			else
+				$id = $newId;
+
+			if($id > 0)
+				header ("Location: cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&id=$id&msg=" . $msg."&level=".$_GET['level']);
+			else
+				header ("Location: cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&msg=" . $msg."&level=".$_GET['level']);
+		}
+		else
+		{
+			header ("Location: cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&msg=" . $msg."&level=".$_GET['level']);
+		}
+		exit();
+	}
+	else if (isset($_GET['id']) && isset($_GET['delete']))
+	{
+ //this will delete the group and all its belongings (image, files, etc)
+		$groups->delete($_GET['id']);
+
+		$msg = "Successfully deleted!";
+		header ("Location: cms.php?groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&msg=" . $msg."&level=".$_GET['level']);
+		exit();
+	}
+	else if (isset($_GET['imageId']) && isset($_GET['deleteImage']))
+	{
+		$groups->delete($_GET['imageId']);
+		$msg = "Image deleted!";
+		header ("Location: cms.php?id=". $_GET['id'] ."&groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&msg=" . $msg."&level=".$_GET['level']);
+		exit();
+	}
+	else if (isset($_GET['deleteListId']))
+	{
+		$groups->delete($_GET['deleteListId']);
+		$msg = "Listing deleted!";
+		header ("Location: cms.php?id=". $_GET['id'] ."&groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&msg=" . $msg."&level=".$_GET['level']);
+		exit();
+	}
+	else if (isset($_GET['fileId']) && isset($_GET['deleteFile']))
+	{
+		$listingFiles->delete($_GET['fileId']);
+		$msg = "File deleted!";
+
+		$url = "cms.php?id=". $_GET['id'] ."&parentId=". $_GET['parentId'] ."&groupType=". $_GET['groupType']."&listId=" . $_GET['listId']."&level=".$_GET['level'];
+		if(isset($_GET['page']))
+			$url .= "&page=".$_GET['page'];
+		
+		header ("Location: ". $url . "&msg=" . $msg);
+		exit();
+	}
+	elseif(isset($_GET['listId']) && isset($_GET['deleteImage']))
+	{
+		$result = $groups -> getById($_GET['listId']);
+		$row = $conn -> fetchArray($result);
+
+		$groups -> updateImage($row['id'], "");
+		@unlink("../". CMS_GROUPS_DIR . $row['filename']);
+
+		$msg = "Image deleted!";
+
+		$url = "cms.php?id=". $_GET['id'] ."&parentId=". $_GET['parentId'] ."&groupType=". $_GET['groupType'] ."&listId=". $_GET['listId']."&level=".$_GET['level'];
+		if(isset($_GET['page']))
+			$url .= "&page=".$_GET['page'];
+
+		header ("Location: ". $url ."&msg=" . $msg);
+		exit();
+	}
+	elseif(isset($_GET['id']) && isset($_GET['deleteImage']))
+	{
+		$result = $groups -> getById($_GET['id']);
+		$row = $conn -> fetchArray($result);
+
+		$groups->updateImage($row['id'], "");
+		@unlink("../". CMS_GROUPS_DIR . $row['image']);
+
+		$msg = "Image deleted!";
+
+		$url = "cms.php?id=". $_GET['id'] ."&parentId=". $_GET['parentId'] ."&groupType=". $_GET['groupType']."&level=".$_GET['level'];
+		if(isset($_GET['page']))
+			$url .= "&page=".$_GET['page'];
+
+		header ("Location: ". $url ."&msg=" . $msg);
+		exit();
+	}
+	else if (isset($_GET['videoId']) && isset($_GET['deleteVideo']))
+	{
+		$groups -> delete($_GET['videoId']);
+		$msg = "Video deleted!";
+		header ("Location: cms.php?id=". $_GET['id'] ."&groupType=". $_GET['groupType'] ."&parentId=". $_GET['parentId'] ."&msg=" . $msg."&level=".$_GET['level']);
+		exit();
+	}
+	?>

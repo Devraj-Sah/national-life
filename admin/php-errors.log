@@ -1,0 +1,27 @@
+[30-May-2016 15:34:32 Asia/Katmandu] PHP Parse error:  syntax error, unexpected end of file in /var/www/clients/client100/web274/web/admin/cms.php on line 148
+[30-May-2016 15:34:34 Asia/Katmandu] PHP Parse error:  syntax error, unexpected end of file in /var/www/clients/client100/web274/web/admin/cms.php on line 313
+[16-Jun-2016 13:56:05 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 13:56:14 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 13:59:52 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:02:59 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:07:10 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:10:32 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:10:34 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:11:20 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:11:25 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:13:17 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:13:20 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:16:51 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:16:53 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:16:56 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:16:58 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:17:52 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:17:55 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:18:00 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:18:11 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:18:13 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 291
+[16-Jun-2016 14:44:32 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/cms.php on line 57
+[16-Jun-2016 14:45:17 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/cms.php on line 57
+[16-Jun-2016 14:46:21 Asia/Katmandu] PHP Parse error:  syntax error, unexpected '.' in /var/www/clients/client100/web274/web/admin/cms.php on line 57
+[16-Jun-2016 14:57:55 Asia/Katmandu] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 279
+[16-Jun-2016 15:28:27 Asia/Katmandu] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /var/www/clients/client100/web274/web/admin/manage_cms.php on line 53

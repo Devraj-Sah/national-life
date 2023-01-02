@@ -1,0 +1,38 @@
+[16-Oct-2022 04:40:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/lifenational/public_html/data/conn.php:16
+Stack trace:
+#0 /home/lifenational/public_html/data/conn.php(88): Dbconn->Dbconn()
+#1 /home/lifenational/public_html/admin/init.php(5): require_once('/home/lifenatio...')
+#2 /home/lifenational/public_html/admin/index.php(2): include('/home/lifenatio...')
+#3 {main}
+  thrown in /home/lifenational/public_html/data/conn.php on line 16
+[02-Nov-2022 14:05:24 Asia/Kathmandu] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/lifenational/public_html/includes/paging.php:109
+Stack trace:
+#0 /home/lifenational/public_html/admin/feedbacks.php(101): include()
+#1 {main}
+  thrown in /home/lifenational/public_html/includes/paging.php on line 109
+[09-Nov-2022 14:26:04 Asia/Kathmandu] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/lifenational/public_html/includes/paging.php:109
+Stack trace:
+#0 /home/lifenational/public_html/admin/ajaxGalleryPanel.php(26): include()
+#1 /home/lifenational/public_html/admin/cms.php(259): include('/home/lifenatio...')
+#2 {main}
+  thrown in /home/lifenational/public_html/includes/paging.php on line 109
+[09-Nov-2022 14:38:21 Asia/Kathmandu] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/lifenational/public_html/includes/paging.php:109
+Stack trace:
+#0 /home/lifenational/public_html/admin/ajaxGalleryPanel.php(26): include()
+#1 /home/lifenational/public_html/admin/cms.php(259): include('/home/lifenatio...')
+#2 {main}
+  thrown in /home/lifenational/public_html/includes/paging.php on line 109
+[09-Nov-2022 14:38:32 Asia/Kathmandu] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/lifenational/public_html/includes/paging.php:109
+Stack trace:
+#0 /home/lifenational/public_html/admin/ajaxGalleryPanel.php(26): include()
+#1 /home/lifenational/public_html/admin/cms.php(259): include('/home/lifenatio...')
+#2 {main}
+  thrown in /home/lifenational/public_html/includes/paging.php on line 109
+[09-Nov-2022 14:38:57 Asia/Kathmandu] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_query() in /home/lifenational/public_html/includes/paging.php:109
+Stack trace:
+#0 /home/lifenational/public_html/admin/ajaxGalleryPanel.php(26): include()
+#1 /home/lifenational/public_html/admin/cms.php(259): include('/home/lifenatio...')
+#2 {main}
+  thrown in /home/lifenational/public_html/includes/paging.php on line 109
+[30-Nov-2022 10:00:02 UTC] PHP Parse error:  syntax error, unexpected '--' (T_DEC) in /home/lifenational/public_html/admin/cms.php on line 251
+[30-Nov-2022 17:45:46 UTC] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /home/lifenational/public_html/admin/manage_cms.php on line 311

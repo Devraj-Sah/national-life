@@ -1,0 +1,13 @@
+[27-Nov-2016 16:49:07 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:49:19 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:49:22 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:49:35 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:49:39 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:49:49 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:49:52 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:50:02 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:50:59 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:51:00 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:51:05 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:51:08 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87
+[27-Nov-2016 16:51:11 Asia/Kathmandu] PHP Fatal error:  Call to undefined method Groups::getByParentIdNotice() in /var/www/clients/client100/web274/web/nepali/includes/showsubgroups.php on line 87

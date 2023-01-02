@@ -1,0 +1,64 @@
+[27-Jan-2016 03:39:41 Asia/Katmandu] PHP Notice:  Undefined index: file in /var/www/clients/client100/web274/web/data/imager.php on line 3
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 43
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 73
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 75
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 77
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 82
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Warning:  imagecopyresampled() expects parameter 2 to be resource, null given in /var/www/clients/client100/web274/web/data/imager.php on line 82
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:23 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 86
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 87
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 106
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 108
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 110
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /var/www/clients/client100/web274/web/data/imager.php on line 113
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 117
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:31 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 119
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Notice:  Undefined index: mh in /var/www/clients/client100/web274/web/data/imager.php on line 20
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 86
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 87
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 106
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 108
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 110
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /var/www/clients/client100/web274/web/data/imager.php on line 113
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 117
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:32 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 119
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Notice:  Undefined index: mw in /var/www/clients/client100/web274/web/data/imager.php on line 19
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Notice:  Undefined index: mh in /var/www/clients/client100/web274/web/data/imager.php on line 20
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 86
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 87
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 106
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 108
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 110
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /var/www/clients/client100/web274/web/data/imager.php on line 113
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 117
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:33 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 119
+[10-Jun-2016 10:36:39 Asia/Katmandu] PHP Warning:  file_exists(): open_basedir restriction in effect. File(../../index.php) is not within the allowed path(s): (/var/www/clients/client100/web274/web:/var/www/clients/client100/web274/private:/var/www/clients/client100/web274/tmp:/var/www/nationallife.com.np/web:/srv/www/nationallife.com.np/web:/usr/share/php5:/usr/share/php:/tmp:/usr/share/phpmyadmin:/etc/phpmyadmin:/var/lib/phpmyadmin) in /var/www/clients/client100/web274/web/data/imager.php on line 4
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Notice:  Undefined index: mw in /var/www/clients/client100/web274/web/data/imager.php on line 19
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Notice:  Undefined index: mh in /var/www/clients/client100/web274/web/data/imager.php on line 20
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 86
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Warning:  Division by zero in /var/www/clients/client100/web274/web/data/imager.php on line 87
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 106
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 108
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Notice:  Undefined variable: ext in /var/www/clients/client100/web274/web/data/imager.php on line 110
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /var/www/clients/client100/web274/web/data/imager.php on line 113
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 115
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 117
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Notice:  Undefined variable: src in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /var/www/clients/client100/web274/web/data/imager.php on line 118
+[10-Jun-2016 10:36:47 Asia/Katmandu] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /var/www/clients/client100/web274/web/data/imager.php on line 119
+[25-Dec-2016 11:27:26 Asia/Katmandu] PHP Notice:  Undefined index: file in /var/www/clients/client100/web274/web/data/imager.php on line 3

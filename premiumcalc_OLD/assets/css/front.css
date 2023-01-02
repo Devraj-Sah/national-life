@@ -1,0 +1,232 @@
+html {-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+
+html {font-family:"Segoe UI",Tahoma,Verdana,sans-serif;font-weight:400;line-height:1;}
+
+h1,h2,h3,h4,h5,h6 {font-family:"Segoe UI",Tahoma,Verdana,sans-serif;font-weight:400;line-height:1;}
+
+.teal {color:#fff !important;background-color:#009688 !important;}
+
+li{list-style: none;}
+
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+.wrapper{
+	max-width: 500px;
+	width: 500px;
+	min-height: 500px;
+	background-color: #F2F2F2;
+	margin: 15px auto;
+	border-radius: 10px;
+	
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+header{
+	font-size: 20px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 12px 15px 12px 15px;
+	background-color: #00135F;
+	color: #fff;
+	font-weight: 400;
+}
+
+.container{
+	padding: 10px 15px 15px 15px;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+label{
+	font-weight: 600;
+	background-color: #009999;
+	color: #fff;
+	padding: 2px 10px 4px 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: 0px -2px 2px #000;	
+}
+
+.cont-box-inner
+{
+	border: 1px solid #ccc;
+	border-radius:4px;
+	margin-top: 5px;
+	padding: 5px 10px;
+	min-height: 50px;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+}
+
+.cont-box-inner div{
+	margin-bottom:5px;
+}
+
+
+
+input[type=text],input[type="password"],input[type="number"], select{
+ 	font-size: 16px;
+ 	margin-top:6px;
+	padding: 4px 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+
+input[type=text]:focus{
+ 	border: 1px solid #0099CC;
+}
+
+input[type=button]{
+ 	min-width: 20px;
+ 	padding: 7px 30px;
+ 	margin-bottom:15px;
+ 	margin-right: 20px;
+ 	background-color: #333366;
+ 	border: none;
+ 	color: #fff;
+ 	border-radius: 0.3em;
+ 	box-shadow: 0px -2px 2px  #000;
+ 	text-align: center;
+ 	font-size: 17px;
+ }
+
+input[disabled]{
+	background-color: #ccc;
+}
+
+/*#premium-cont{
+	font-size: 22px;
+	border: 1px solid #ccc;
+	border-radius:4px;
+	margin-top: 5px;
+	padding: 5px 10px;
+	min-height: 50px;
+
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+}*/
+
+#premium-box{
+	font-size: 22px;
+	font-weight: 400;
+}
+
+#prm_title{
+	float:left;
+	//margin-top:5px;
+	//margin-left:5px;
+	background-color: #CC6600;
+	color: #fff;
+	padding: 12px 10px;
+}
+
+
+
+ .err_msg{
+ 	color: red;
+ 	font-size: 14px;
+ }
+
+ .req{
+ 	color:red;
+	font-weight:bolder;
+	font-size:22px;
+ }
+
+ .special_msg{
+ 	margin: 5px 0px;
+ 	font-size: 15px;
+ }
+
+ .flash_msg_succ{
+ 	background-color: #339933;
+ 	padding: 10px 20px;
+ 	color:#fff;
+ }
+
+ .flash_msg_err{
+ 	background-color: red;
+ 	padding: 2px 20px;
+ 	color:#fff;
+ }
+
+ .nav-title{
+ 	padding:12px 5px;
+ 	color:#fff; 
+ 	background-color:#FF9900;
+ 	text-align:center;
+ 	font-weight:600;
+ 	box-shadow:0px 3px 2px 0px #ccc;
+ }
+
+ legend{
+ 	font-size: 16px;
+ }
+
+ ::-webkit-input-placeholder {
+   font-size: 13px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-size: 13px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 13px;
+}
+
+:-ms-input-placeholder {  
+   font-size: 13px;
+}
+
+.field_value{
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	margin-top: 10px;
+	padding: 8px 5px;
+
+}
+
+.small{
+	padding: 2px 30px;
+}
+
+.policy_view li{
+	margin-bottom: 25px;
+}
+
+
+
+.space{
+	min-height: 5px;
+}
+
+
+/* TABLES */ 
+table {border-collapse:collapse;border-spacing:0;width:100%;display:table;}
+table,th,td {border:none;}
+table thead th {font-size: 16px;font-weight: 600;}
+table.w3-bordered tr {border-bottom:1px solid #d0d0d0;}
+table.w3-striped tbody tr:nth-child(odd) {background-color:#f2f2f2;}
+table.w3-hoverable tbody tr {transition:background-color .25s ease;}
+table.w3-hoverable tbody tr:hover {background-color:#f2f2f2;}
+table.w3-centered tr th,table.w3-centered tr td {text-align:center;}
+thead.w3-bordered {border-bottom:1px solid #d0d0d0;}
+table.w3-table td,th {padding:6px 8px;display:table-cell;text-align:left;vertical-align:top;}
+table.w3-table th:first-child,table.w3-table td:first-child {padding-left:16px;}
+
+
+#loading_img{
+	position:absolute;
+	top:300px;
+	margin-left:160px;	
+}

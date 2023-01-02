@@ -1,0 +1,16 @@
+[11-Feb-2022 08:08:19 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[11-May-2022 05:47:41 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[11-May-2022 05:48:43 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[11-May-2022 05:48:53 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[11-May-2022 05:50:50 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[11-May-2022 05:51:08 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[11-May-2022 05:51:13 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[11-May-2022 05:52:18 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[13-Aug-2022 13:36:49 UTC] PHP Warning:  Division by zero in /home/lifenational/public_html/data/imager.php on line 43
+[13-Aug-2022 13:36:49 UTC] PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /home/lifenational/public_html/data/imager.php on line 80
+[13-Aug-2022 13:36:49 UTC] PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /home/lifenational/public_html/data/imager.php on line 82
+[13-Aug-2022 13:36:49 UTC] PHP Warning:  imagepng() expects parameter 1 to be resource, boolean given in /home/lifenational/public_html/data/imager.php on line 117
+[13-Aug-2022 13:36:49 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, null given in /home/lifenational/public_html/data/imager.php on line 118
+[13-Aug-2022 13:36:49 UTC] PHP Warning:  imagedestroy() expects parameter 1 to be resource, boolean given in /home/lifenational/public_html/data/imager.php on line 119
+[16-Aug-2022 05:11:38 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74
+[16-Aug-2022 05:12:49 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 10052 bytes) in /home/lifenational/public_html/data/imager.php on line 74

@@ -1,0 +1,178 @@
+.menu {
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+}
+.menu ul{
+  float: left;
+  list-style-type: none;
+}
+.menu ul li {
+  float: left;
+  display: block;
+  list-style-type: none;  
+  vertical-align: top;
+/*  position: relative;
+  z-index: 2;  */
+}
+
+.menu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 0;
+}
+.menu > ul > li > a{
+  padding: 18px 10px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+  color: rgba(0, 19, 95, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+.menu > ul > li:hover > a, .menu > ul > li > a:hover, .menu > ul > li.active > a, .menu > ul > li.current > a {
+  color: #BAB21C;
+}
+
+.menu ul li.first a {
+  border: none;
+  padding-left: 0;
+}
+.menu > ul > li.has-sub > a {
+  padding-right: 45px;
+}
+.menu > ul > li.has-sub > a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: #00135F;
+  right: 30px;
+  top: 23px;
+}
+.menu > ul > li:hover > a::after, .menu > ul > li.active > a::after, .menu > ul > li.current a::after {
+  border-top-color: #BAB21C;
+}
+.menu ul li a:hover{
+  text-decoration: none;
+}
+.dropdownWrap {
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+  display: none; 
+}
+.dropdownWrap .midcrv {
+  background: #fff; 
+  float: left;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.dropdownWrap .midcrv .lhssection {
+  float: left;
+  width: 180px;
+}
+.dropdownWrap .midcrv .lhssection ul {
+  float: left;
+  border: none;
+  width: 100%;
+}
+.dropdownWrap .midcrv .lhssection ul li.active {
+  background: #239edd;
+  color: #FFF;
+}
+.dropdownWrap .midcrv .lhssection ul li {
+  float: none;
+  font-weight: 500;
+  color: #005593;
+  border: 0;
+  padding: 10px 20px;
+}
+.dropdownWrap .midcrv .lhssection ul li.active a {
+  color: #FFF;
+}
+.dropdownWrap .midcrv .lhssection ul li a {
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.dropdownWrap .midcrv .rhssection {
+  float: left;
+}
+.dropdownWrap .midcrv .rhssection .innerNavs {
+  display: none;
+  float: left;
+  border-left: 2px solid #239edd;
+  overflow: hidden;
+  position: relative;
+  margin-left: 5px;
+}
+.innerNavs .innerNavContainer {
+  width: 382px;
+  float: left;
+}
+.dropdownWrap .midcrv .rhssection ul {
+  float: left;
+  width: 180px;
+  border: none;
+  padding: 10px 0 0 0px;
+}
+.dropdownWrap .midcrv .rhssection ul li {
+  float: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  color: #005593;
+  border: none;
+  cursor: default;
+  overflow: hidden;
+  padding: 0 0 15px 0px;
+}
+.dropdownWrap .midcrv .rhssection ul li a {
+  background: url(/assets/images/bullet_bluearrowsmalltrans.png) no-repeat 0 5px;
+  border: none;
+  color: #005593;
+  text-decoration: none;
+  height: auto;
+  display: block;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.dropdownWrap .midcrv .rhssection ul li a:hover, .dropdownWrap .midcrv .rhssection ul li.active a{
+  color: #BAB21C;
+}
+.dropdownWrap .midcrv .rhssection .right_banner {
+  float: right;
+  border-left: 2px solid #239edd;
+}
+
+.product .midcrv{
+  width: 581px;
+}
+.gallerysd .midcrv, .gallery .midcrv {
+  width: 377px;
+}
+.gallerysd .midcrv .innerNavs, .gallery .midcrv .innerNavs{
+  width: 180px!important;
+}
+.gallerysd .midcrv .right_banner, .gallery .midcrv .right_banner{
+  display:none!important;
+}
+
+#cssmenu > ul {
+  display:none;
+}
+
+@media all and (max-width: 800px) {
+  .menu{
+    display:none;
+  }
+}
